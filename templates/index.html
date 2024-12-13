@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inventory</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Tahoma, sans-serif;
+			text-align: right;
+			direction: rtl;
+		}
+		/* label[for="name"] {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			} */
+
+		label[for="technitian_name"] {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+			
+			}
+
+		h1 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 32px;
+		}
+
+		form {
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 30px;
+			background-color: #f5f5f5;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+
+		input[type=text] {
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0;
+			border: none;
+			border-radius: 5px;
+			box-sizing: border-box;
+			background-color: #5bb4fd;
+
+		}
+
+		input[type=number] {
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0;
+			border: none;
+			border-radius: 5px;
+			box-sizing: border-box;
+		}
+
+		select {
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0;
+			border: none;
+			border-radius: 5px;
+			box-sizing: border-box;
+		}
+
+		input[type=submit] {
+			background-color: #5bb4fd;;
+			color: white;
+			padding: 10px 35px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1.2rem;
+
+		}
+
+		input[type=submit]:hover {
+			background-color: #4b69f3;
+		}
+
+		@media (max-width: 500px) {
+			form {
+				padding: 10px;
+			}
+		}
+
+		h1{
+
+		text-align: center;
+
+		}
+
+		label{
+
+		text-align: center;
+
+		}
+		
+		#name {
+		font-size: 20px;
+		background-color: #5bb4fd;
+		color: hsl(0, 0%, 3%);
+		}
+
+		#signature {
+		text-align: center;
+		}
+
+		canvas {
+		border: 1px solid #ddd;
+		}
+
+		#signature-pad {
+		display: inline-block;
+		margin: 0 auto;
+		}
+
+</style>
+	</style>
+</head>
+<body>
+	<h1>ספירת מלאי רכב</h1>
+	<form method="POST" enctype="multipart/form-data">
+		<label for="technitian_name"><b>שם הטכנאי :</b></label>
+		<input type="text" name="technitian_name" id="technitian_name" required>
+
+		<br><br>
+		<label for="input1"><b>קופה 5200 שחורה חדש</b></label>
+		<input type="number" name="input1" id="input1" required>
+		<br><br>
+		<label for="input2"><b>קופה 5200 שחורה שכירות</b></label>
+		<input type="number" name="input2" id="input2" required>
+		<br><br>
+		<label for="input3"><b>קופה 5200 לבנה חדש</b></label>
+		<input type="number" name="input3" id="input3" required>
+		<br><br>
+		<label for="input4"><b>קופה 5200 לבנה שכירות</b></label>
+		<input type="number" name="input4" id="input4" required>
+		<br><br>
+		<label for="input5"><b>מגירות שכירות + רכישה</b></label>
+		<input type="number" name="input5" id="input5" required>
+		<br><br>
+		<label for="input6"><b>P400 חדש</b></label>
+		<input type="number" name="input6" id="input6" required>
+		<br><br>
+		<label for="input7"><b>P400 שכירות</b></label>
+		<input type="number" name="input7" id="input7" required>
+		<br><br>
+		<label for="input8"><b>VX680</b></label>
+		<input type="number" name="input8" id="input8" required>
+		<br><br>
+		<label for="input9"><b>VX820</b></label>
+		<input type="number" name="input9" id="input9" required>
+		<br><br>
+		<label for="input10"><b>VX520 GPRS </b></label>
+		<input type="number" name="input10" id="input10" required>
+
+		<label for="input11"><b>VX520 ETH</b></label>
+		<input type="number" name="input11" id="input11" required>
+		<br><br>
+		<label for="input12"><b>VX520 DEBIT</b></label>
+		<input type="number" name="input12" id="input12" required>
+		<br><br>
+		<label for="input13"><b>VX805</b></label>
+		<input type="number" name="input13" id="input13" required>
+		<br><br>
+		<label for="input14"><b>סוויץ רשת</b></label>
+		<input type="number" name="input14" id="input14" required>
+		<br><br>
+		<label for="input15"><b>נתב סלולארי דור 4</b></label>
+		<input type="number" name="input15" id="input15" required>
+		<br><br>
+		<label for="input16"><b>אקדח ברקוד ידני</b></label>
+		<input type="number" name="input16" id="input16" required>
+		<br><br>
+		<label for="input17"><b>קופה 6200</b></label>
+		<input type="number" name="input17" id="input17" required>
+		<br><br>
+		<label for="input18"><b>CM5 קופה</b></label>
+		<input type="number" name="input18" id="input18" required>
+		<br><br>
+		<label for="input19"><b>CM5 אשראית</b></label>
+		<input type="number" name="input19" id="input19" required>
+		<br><br>
+		<label for="input20"><b>AI T650 קופה </b></label>
+		<input type="number" name="input20" id="input20" required>
+		<br><br>
+		<label for="input21"><b>T650 אשראית</b></label>
+		<input type="number" name="input21" id="input21" required>
+		<br><br>
+		<label for="input22"><b>T650C אשראית</b></label>
+		<input type="number" name="input22" id="input22" required>
+		<br><br>
+		<label for="input23"><b>T650 סיבוס</b></label>
+		<input type="number" name="input23" id="input23" required>
+		<br><br>
+		<label for="input24"><b>T650C סיבוס</b></label>
+		<input type="number" name="input24" id="input24" required>
+		<br><br>
+		<label for="input25"><b>CM5 קופה שכירות</b></label>
+		<input type="number" name="input25" id="input25" required>
+		<br><br>
+		<label for="input26"><b>CM5 אשראית שכירות</b></label>
+		<input type="number" name="input26" id="input26" required>
+		<br><br>
+		<label for="input27"><b>T650 אשראית שכירות</b></label>
+		<input type="number" name="input27" id="input27" required>
+		<br><br>
+		<label for="input28"><b>AI T650 קופה/אשראית שכירות</b></label>
+		<input type="number" name="input28" id="input28" required>
+		<br><br>
+		<label for="input29"><b>C650T שכירות</b></label>
+		<input type="number" name="input29" id="input29" required>
+		<br><br>
+		<label for="input30"><b>נייר קטן</b></label>
+		<input type="number" name="input30" id="input30" required>
+		<br><br>
+		<label for="input31"><b>נייר בינוני</b></label>
+		<input type="number" name="input31" id="input31" required>
+		<br><br>
+		<label for="input32"><b>נייר ענק (גזית)</b></label>
+		<input type="number" name="input32" id="input32" required>
+		<br><br>
+		<br><br>
+		<label for="tech_remark"><b>הערות :</b></label>
+		<input type="text" name="tech_remark" id="tech_remark" required>
+		<br><br>
+		<br>
+
+		
+		<form method="POST" action="/process_form" enctype="multipart/form-data">
+		<br><br>
+		<label for="signature"><b>חתימה</b></label><br>
+		<div style="text-align: center;">
+			<canvas id="signature-pad"></canvas>
+		</div>
+		<input type="hidden" name="signature_data" id="signature-data">
+		<br>
+		<button id="clear-button" style="font-size: 18px;">נקה חתימה</button>
+		<br><br>
+		<input type="submit" value="שלח" style="display: block; margin: 0 auto;">
+		<br><br>
+		</form>
+		  
+		<script src="https://unpkg.com/signature_pad"></script>
+		<script>
+		var canvas = document.getElementById('signature-pad');
+		var signaturePad = new SignaturePad(canvas);
+		
+		var clearButton = document.getElementById('clear-button');
+		clearButton.addEventListener('click', function(e) {
+			signaturePad.clear();
+		});
+		
+		var form = document.querySelector('form');
+		form.addEventListener('submit', function(e) {
+			e.preventDefault();
+			var signatureData = signaturePad.toDataURL();
+			document.getElementById('signature-data').value = signatureData;
+			form.submit();
+		});
+		</script>
+
+	<!-- <input type="submit" value="Send" style="display: block; margin: 0 auto;"> -->
+		
+</body>
